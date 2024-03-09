@@ -1,49 +1,37 @@
-# Getting Started with Create React App
+# Project Description
+- This is the frontend web progressive app develop by Team Djara as caption-2 project at [MEST, 2024 Cohort](https://meltwater.org/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Functionalies
+- This web is a market place for people that are into group travels/trips. We aggregate them and give our users wide range of choices.
 
-## Available Scripts
+## Technologies
+- React
+- Tailwing for styling
 
-In the project directory, you can run:
+## Import links
+- [Dev Live Demo](https://djaro-trips-web.vercel.app/)
+- [Repository Link](https://github.com/djaro-mest-capston-2/djaro-trips-web)
+- [Project Requirement Document](https://docs.google.com/document/d/1CbCCAsBdMFxzLllbTiinRJIy2t9f9eT5/edit)
+- [Figma Design](https://www.figma.com/file/xStlPvBP0jp1BScE4hGser/Untitled?type=design&node-id=1-3&mode=design&t=S7RsLYOaqB24bG8p-0)
+- [Figjam Flow](https://www.figma.com/file/ZzQyh9ciKxSGcy45DUPKp9/Flow-Charts?type=whiteboard&node-id=0-1&t=7q6AyDIOvEnPlZzE-0)
+- [High Fidelity Prottotype](https://app.flutterflow.io/project/monji-lsn3z7)
+## How to contribute to this repository
 
-### `npm start`
+1. Run `git clone https://github.com/djaro-mest-capston-2/djaro-trips-web` to clone the repository 
+2. Run `yarn` to install dependencies
+3. Run `yarn start` to start app or `yarn start:dev` to start development server'
+4. Run `git checkout -b <branch name>` to swith into a new branch
+5. create or pick an existing issue here [Issue](https://github.com/djaro-mest-capston-2/djaro-trips-web/issues)
+6. Make changes to your branch
+7. Run `git status` to view your stagging status. Unstagged files appear with color `red`
+8. Run `git add .` to stage all your changes or `git add <directory or reference>` to stage specific files
+9. Run `git status` to confirm all stagged files. Stagged files appear with color `green`
+10. Run `git commit -m '<issue-no: commit message>'` to describe your changes
+11. Run `git pull origin develop` to update your local branch to remote branch. 
+12. Resolve `conflicts` if with if any
+13. Run `git push origin <branch name>` to push to your branch
+14. Visit [Main Repo](https://github.com/djaro-mest-capston-2/djaro-trips-web) and make a pull request.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Code Splitting
 
