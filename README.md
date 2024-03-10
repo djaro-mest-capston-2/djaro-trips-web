@@ -19,7 +19,7 @@
 
 1. Run `git clone https://github.com/djaro-mest-capston-2/djaro-trips-web` to clone the repository 
 2. Run `yarn` to install dependencies
-3. Run `yarn start` to start app or `yarn start:dev` to start development server'
+3. Run `yarn start` to start app or `yarn dev` to start development server'
 4. Run `git checkout -b <branch name>` to swith into a new branch
 5. create or pick an existing issue here [Issue](https://github.com/djaro-mest-capston-2/djaro-trips-web/issues)
 6. Make changes to your branch
@@ -32,6 +32,56 @@
 13. Run `git push origin <branch name>` to push to your branch
 14. Visit [Main Repo](https://github.com/djaro-mest-capston-2/djaro-trips-web) and make a pull request.
 
+
+## Folder structure
+trip-planner-app/
+├── public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── common/
+│   │   │   ├── NavBar/
+│   │   │   │   ├── index.jsx
+│   │   │   │   └── styles.module.css
+│   │   │   ├── Footer/
+│   │   │   │   ├── index.jsx
+│   │   │   │   └── styles.module.css
+│   │   │   ├── Box/
+│   │   │   │   ├── index.jsx
+│   │   │   │   └── styles.module.css
+│   │   │   └── Modal/
+│   │   │       ├── index.jsx
+│   │   │       └── styles.module.css
+│   │   └── features/
+│   │       ├── TripList/
+│   │       │   ├── index.jsx
+│   │       │   └── styles.module.css
+│   │       └── TripDetails/
+│   │           ├── index.jsx
+│   │           └── styles.module.css
+│   ├── pages/
+│   │   ├── HomePage/
+│   │   │   ├── index.jsx
+│   │   │   └── styles.module.css
+│   │   └── TripPage/
+│   │       ├── index.jsx
+│   │       └── styles.module.css
+│   ├── utils/  # Utility functions
+│   ├── hooks/  # Custom React hooks
+│   ├── context/ # Contexts for global state management
+│   ├── assets/
+│   │   ├── styles/
+│   │   │   └── index.css
+│   │   ├── images/
+│   │   └── fonts/
+│   ├── App.jsx
+│   ├── index.jsx
+│   └── routes.jsx
+├── .gitignore
+├── package.json
+└── tailwind.config.js
 
 ### Code Splitting
 
