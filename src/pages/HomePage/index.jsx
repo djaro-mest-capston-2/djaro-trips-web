@@ -19,10 +19,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              YOUR NEXT TRIP IS JUST A CLICKS AWAY
+              YOUR NEXT TRIP IS JUST A CLICK AWAY
             </h1>
             <p className="mt-6 text-lg leading-8 text-white">
-              YOUR NEXT TRIP IS JUST A CLICKS AWAY
+              YOUR NEXT TRIP IS JUST A CLICK AWAY
             </p>
           </div>
         </div>

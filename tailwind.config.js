@@ -27,8 +27,9 @@ module.exports = {
         '9xl': '128rem',
       },
       backgroundImage: {
-        'hero-bg': "url('./assets/images/hero-bg.png')",
-       }
+        'hero-bg':
+          "url('./assets/images/hero-bg.png')",
+      },
     },
   },
   plugins: [
