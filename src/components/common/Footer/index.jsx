@@ -108,7 +108,7 @@ const Footer = () => {
                 href="#about-faq"
                 className="hover:text-secondary transition-colors"
               >
-                About Gomogi
+                About gomonji
               </a>
             </li>
             <li className={styles.footerItem}>
