@@ -3,7 +3,7 @@ const reportWebVitals = (onPerfEntry) => {
     onPerfEntry &&
     onPerfEntry instanceof Function
   ) {
-    import('web-vitals').then(
+    import("web-vitals").then(
       ({
         getCLS,
         getFID,
