@@ -1,39 +1,63 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 const Button = ({
-  backgroundColor,
-  textColor,
-  padding,
-  margin,
-  border,
+  label,
+  onClick,
+  type,
+  variant,
   className,
-  children,
+  ...rest
 }) => {
+  const getVariantClasses = () => {
+    switch (variant) {
+      case "primary":
+        return "bg-primary text-white";
+      case "secondary":
+        return "bg-secondary text-black";
+      // Add more variants as needed
+      default:
+        return "bg-gray-500 text-white";
+    }
+  };
+
+  const getBaseClasses = () =>
+    "px-4 py-2 rounded-md transition duration-300";
+
+  const buttonClasses = `${getBaseClasses()} ${getVariantClasses()} ${className}`;
+
   return (
     <button
-      style={{
-        backgroundColor,
-        color: textColor,
-        padding,
-        margin,
-        border,
-      }}
-      className={className}
+      type={type}
+      className={buttonClasses}
+      onClick={onClick}
+      {...rest}
     >
-      {children}
+      {label}
     </button>
   );
 };
 
 Button.propTypes = {
-  backgroundColor: PropTypes.string,
-  textColor: PropTypes.string,
-  padding: PropTypes.string,
-  margin: PropTypes.string,
-  border: PropTypes.string,
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  type: PropTypes.oneOf([
+    "button",
+    "submit",
+    "reset",
+  ]),
+  variant: PropTypes.oneOf([
+    "primary",
+    "secondary",
+  ]),
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
+};
+
+Button.defaultProps = {
+  onClick: () => {},
+  type: "button",
+  variant: "primary",
+  className: "",
 };
 
 export default Button;

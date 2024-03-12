@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import { Dialog } from '@headlessui/react';
+import { useState } from "react";
+import { Dialog } from "@headlessui/react";
 import {
   Bars3Icon,
   XMarkIcon,
-} from '@heroicons/react/24/outline';
+} from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: 'About', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Trips', href: '#' },
-  { name: 'Contact', href: '#' },
+  { name: "About", href: "#" },
+  { name: "Features", href: "#" },
+  { name: "Trips", href: "#" },
+  { name: "Contact", href: "#" },
 ];
 
 export default function NavBar() {
@@ -68,7 +68,7 @@ export default function NavBar() {
               href="#"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
-              Log in{' '}
+              Log in{" "}
               <span aria-hidden="true">
                 &rarr;
               </span>
@@ -91,11 +91,6 @@ export default function NavBar() {
                 <span className="sr-only">
                   Your Company
                 </span>
-                <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                />
               </a>
               <button
                 type="button"

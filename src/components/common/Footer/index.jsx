@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './styles.module.css';
+import React from "react";
+import styles from "./styles.module.css";
 
 const Footer = () => {
   return (
@@ -50,7 +50,7 @@ const Footer = () => {
                 href="#partners-faq"
                 className="hover:text-secondary transition-colors"
               >
-                List your group trips{' '}
+                List your group trips{" "}
               </a>
             </li>
             <li className={styles.footerItem}>
