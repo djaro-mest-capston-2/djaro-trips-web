@@ -15,6 +15,7 @@ export default function HomePage() {
     </>
   );
 }
+
 const HeroSection = () => {
   const handleJoinWaitLisButton = () => {
     console.log("Join wait list button clicked");
@@ -24,36 +25,31 @@ const HeroSection = () => {
     alert("Become beta user button clicked");
   };
   return (
-    <div className="inset-0">
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          aria-hidden="true"
-        ></div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              YOUR NEXT TRIP IS JUST A FEW CLICKS
-              AWAY
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-white">
-              Explore the world with gomonji, your
-              one-stop shop for curated group
-              adventures with flexible payments.
-            </p>
-            <br />
-            <Button
-              variant="secondary"
-              label="Join the wait list"
-              onClick={handleJoinWaitLisButton}
-            />
-            <Button
-              label="Become a beta user"
-              onClick={handleBecomeBetaButton}
-              className="ml-4"
-              variant="primary"
-            />
-          </div>
+    <div className="relative bg-hero inset-0">
+      <div className="absolute inset-x-0 -top-40 sm:-top-80 -z-10 transform-gpu overflow-hidden blur-3xl"></div>
+      <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white">
+            YOUR NEXT TRIP IS JUST A FEW CLICKS
+            AWAY
+          </h1>
+          <p className="mt-6 text-base sm:text-lg lg:text-xl leading-6 text-white">
+            Explore the world with gomonji, your
+            one-stop shop for curated group
+            adventures with flexible payments.
+          </p>
+          <br />
+          <Button
+            variant="secondary"
+            label="Join the wait list"
+            onClick={handleJoinWaitLisButton}
+          />
+          <Button
+            label="Become a beta user"
+            onClick={handleBecomeBetaButton}
+            className="ml-4"
+            variant="primary"
+          />
         </div>
       </div>
     </div>
@@ -83,30 +79,28 @@ const FeatureSection = () => {
     // Add more team members as needed
   ];
   return (
-    <>
-      <div className="grid grid-cols-2 gap-4 p-5 md:p-10">
-        <div>
-          <img
-            src={featurePhoto}
-            alt="photo"
-            className=" h-auto"
-          />
-        </div>
-        <div>
-          <h1 className="mb-4 text-4xl font-bold color-tertiary">
-            With Gomonji, you can
-          </h1>
-          {teamMembers.map((member, index) => (
-            <TeamMember
-              key={index}
-              avatar={member.avatar}
-              title={member.title}
-              description={member.description}
-            />
-          ))}
-        </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 md:p-10">
+      <div>
+        <img
+          src={featurePhoto}
+          alt="photo"
+          className="w-full h-auto"
+        />
       </div>
-    </>
+      <div>
+        <h1 className="mb-4 text-2xl sm:text-4xl lg:text-5xl font-bold text-tertiary">
+          With Gomonji, you can
+        </h1>
+        {teamMembers.map((member, index) => (
+          <TeamMember
+            key={index}
+            avatar={member.avatar}
+            title={member.title}
+            description={member.description}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 
@@ -116,23 +110,21 @@ const TeamMember = ({
   description,
 }) => {
   return (
-    <>
-      <div className="flex items-center border border-secondary-100 mb-6 rounded-lg">
-        <img
-          src={avatar}
-          alt={`Avatar of ${title}`}
-          className="w-12 h-12 rounded-full mr-8"
-        />
-        <div>
-          <h3 className="text-lg font-semibold">
-            {title}
-          </h3>
-          <p className="text-gray-600">
-            {description}
-          </p>
-        </div>
+    <div className="flex flex-col sm:flex-row items-center border border-secondary-100 mb-6 rounded-lg">
+      <img
+        src={avatar}
+        alt={`Avatar of ${title}`}
+        className="w-12 h-12 rounded-full sm:mr-8"
+      />
+      <div className="mt-3 sm:mt-0">
+        <h3 className="text-base sm:text-lg lg:text-xl font-semibold">
+          {title}
+        </h3>
+        <p className="text-sm sm:text-base text-gray-600">
+          {description}
+        </p>
       </div>
-    </>
+    </div>
   );
 };
 
