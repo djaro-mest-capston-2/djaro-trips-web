@@ -4,6 +4,10 @@ import Button from "../../components/common/Button/";
 import featurePhoto from "../../assets/images/feature-photo.png";
 import bulletPoint from "../../assets/images/bulet-point.png";
 import buletPoint2 from "../../assets/images/bullet-point2.png";
+import singleTrip from "../../assets/images/Single Trip.png";
+import singleTrip1 from "../../assets/images/Single Trip (1).png";
+import singleTrip2 from "../../assets/images/Single Trip (2).png";
+import singleTrip3 from "../../assets/images/Single Trip (3).png";
 
 export default function HomePage() {
   return (
@@ -12,6 +16,7 @@ export default function HomePage() {
         <HeroSection />
       </div>
       <FeatureSection />
+      <SampleComponent />
     </>
   );
 }
@@ -132,4 +137,41 @@ TeamMember.propTypes = {
   avatar: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+};
+
+const SampleComponent = () => {
+  return (
+    <>
+      <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-tertiary text-center mt-10 mb-10">
+        Become a Beta Tester
+      </h1>
+      <p className="text-center text-center mt-10 mb-10">
+        Be among the first to explore with us by
+        becoming a beta tester and join one of
+        these trips
+      </p>
+      <div className="grid grid-cols-4 gap-4">
+        <div>
+          <img src={singleTrip} alt="" />
+        </div>
+        <div>
+          <img src={singleTrip1} alt="" />
+        </div>
+        <div>
+          <img src={singleTrip2} alt="" />
+        </div>
+        <div>
+          <img src={singleTrip3} alt="" />
+        </div>
+      </div>
+      <div className="text-center text-center mt-10 mb-10">
+        <Button
+          label="Become a beta user"
+          // onClick={handleBecomeBetaButton}
+          className="ml-4"
+          variant="primary"
+        />
+      </div>
+    </>
+  );
 };
