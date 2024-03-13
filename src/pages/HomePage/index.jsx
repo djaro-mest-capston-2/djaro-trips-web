@@ -204,12 +204,12 @@ const BetaFormSection = () => {
       </div>
       <div className="p-6 sm:p-12 lg:p-16">
         <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-tertiary mb-6 sm:mb-10">
-          Become a Beta Tester
+          Be the First to Know
         </h1>
         <p className="text-center mt-6 sm:mt-10 mb-6 sm:mb-10">
-          Be among the first to explore with us by
-          becoming a beta tester and join one of
-          these trips
+          Sign up now and get exclusive access to
+          upcoming group trips and early booking
+          offers.
         </p>
         <div>
           <WaitListSignUpForm />

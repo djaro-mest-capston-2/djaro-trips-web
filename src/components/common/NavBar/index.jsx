@@ -4,6 +4,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import logo from "../../../assets/images/logo.png";
 
 const navigation = [
   { name: "About", href: "#" },
@@ -30,8 +31,8 @@ export default function NavBar() {
               </span>
               <img
                 className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
+                src={logo}
+                alt="logo"
               />
             </a>
           </div>
