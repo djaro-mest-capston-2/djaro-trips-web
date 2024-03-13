@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage/index";
 function App() {
   return (
     <>
-      <div className="bg-hero">
+      <div className="">
         <NavBar />
         <HomePage />
       </div>
