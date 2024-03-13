@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import Button from "../../components/common/Button/";
 import featurePhoto from "../../assets/images/feature-photo.png";
@@ -8,6 +8,8 @@ import singleTrip from "../../assets/images/Single Trip.png";
 import singleTrip1 from "../../assets/images/Single Trip (1).png";
 import singleTrip2 from "../../assets/images/Single Trip (2).png";
 import singleTrip3 from "../../assets/images/Single Trip (3).png";
+import betaFormPhoto from "../../assets/images/Rectangle 21.png";
+import TextInput from "../../components/common/FormField";
 
 export default function HomePage() {
   return (
@@ -17,6 +19,7 @@ export default function HomePage() {
       </div>
       <FeatureSection />
       <SampleComponent />
+      <BetaFormSection />
     </>
   );
 }
@@ -141,37 +144,121 @@ TeamMember.propTypes = {
 
 const SampleComponent = () => {
   return (
-    <>
-      <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-tertiary text-center mt-10 mb-10">
+    <div className="text-center mt-10 mb-10">
+      <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-tertiary mb-10">
         Become a Beta Tester
       </h1>
-      <p className="text-center text-center mt-10 mb-10">
+      <p>
         Be among the first to explore with us by
         becoming a beta tester and join one of
         these trips
       </p>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
         <div>
-          <img src={singleTrip} alt="" />
+          <img
+            src={singleTrip}
+            alt=""
+            className="w-full h-auto"
+          />
         </div>
         <div>
-          <img src={singleTrip1} alt="" />
+          <img
+            src={singleTrip1}
+            alt=""
+            className="w-full h-auto"
+          />
         </div>
         <div>
-          <img src={singleTrip2} alt="" />
+          <img
+            src={singleTrip2}
+            alt=""
+            className="w-full h-auto"
+          />
         </div>
         <div>
-          <img src={singleTrip3} alt="" />
+          <img
+            src={singleTrip3}
+            alt=""
+            className="w-full h-auto"
+          />
         </div>
       </div>
-      <div className="text-center text-center mt-10 mb-10">
-        <Button
-          label="Become a beta user"
-          // onClick={handleBecomeBetaButton}
-          className="ml-4"
-          variant="primary"
+      <Button
+        label="Become a beta user"
+        className="ml-4"
+        variant="primary"
+      />
+    </div>
+  );
+};
+
+const BetaFormSection = () => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-secondary">
+      <div>
+        <img
+          src={betaFormPhoto}
+          alt=""
+          className="w-full h-auto"
         />
       </div>
-    </>
+      <div className="p-6 sm:p-12 lg:p-16">
+        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-tertiary mb-6 sm:mb-10">
+          Become a Beta Tester
+        </h1>
+        <p className="text-center mt-6 sm:mt-10 mb-6 sm:mb-10">
+          Be among the first to explore with us by
+          becoming a beta tester and join one of
+          these trips
+        </p>
+        <div>
+          <WaitListSignUpForm />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const WaitListSignUpForm = () => {
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] =
+    useState("");
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePhoneNumberChange = (e) => {
+    setPhoneNumber(e.target.value);
+  };
+
+  return (
+    <form className="flex flex-col space-y-4">
+      <TextInput
+        label="Email"
+        id="email"
+        name="email"
+        type="email"
+        placeholder="Enter your Email"
+        value={email}
+        onChange={handleEmailChange}
+        required
+      />
+      <TextInput
+        label="Phone Number"
+        id="phoneNumber"
+        name="phoneNumber"
+        type="tel"
+        placeholder="Enter your Phone Number"
+        value={phoneNumber}
+        onChange={handlePhoneNumberChange}
+        required
+      />
+      <Button
+        label="Get Notified"
+        className="ml-4 self-start sm:self-auto"
+        variant="primary"
+      />
+    </form>
   );
 };
