@@ -4,12 +4,13 @@ import Button from "../../components/common/Button/";
 import featurePhoto from "../../assets/images/feature-photo.png";
 import bulletPoint from "../../assets/images/bulet-point.png";
 import buletPoint2 from "../../assets/images/bullet-point2.png";
-import singleTrip from "../../assets/images/Single Trip.png";
-import singleTrip1 from "../../assets/images/Single Trip (1).png";
-import singleTrip2 from "../../assets/images/Single Trip (2).png";
-import singleTrip3 from "../../assets/images/Single Trip (3).png";
+import trip from "../../assets/images/trips-images/Rectangle 11.png";
+import trip1 from "../../assets/images/trips-images/Rectangle 9 (1).png";
+import trip2 from "../../assets/images/trips-images/Rectangle 9.png";
+import trip3 from "../../assets/images/trips-images/Rectangle 9 (2).png";
 import betaFormPhoto from "../../assets/images/Rectangle 21.png";
 import TextInput from "../../components/common/FormField";
+import { TripList } from "../../components/features/TripDetails";
 
 export default function HomePage() {
   return (
@@ -143,52 +144,91 @@ TeamMember.propTypes = {
 };
 
 const SampleComponent = () => {
+  const tripsData = [
+    {
+      id: 1,
+      picture: trip,
+      title: "Trip to Beach Paradise",
+      startDate: "2024-06-15",
+      endDate: "2024-06-20",
+      noOfPeople: 4,
+      amount: 1200,
+      bookButton: (
+        <button className="bg-blue text-white px-4 py-2 rounded">
+          Book Now
+        </button>
+      ),
+    },
+    {
+      id: 2,
+      picture: trip1,
+      title: "Mountain Hiking Expedition",
+      startDate: "2024-07-10",
+      endDate: "2024-07-15",
+      noOfPeople: 6,
+      amount: 1800,
+      bookButton: (
+        <button className="bg-blue text-white px-4 py-2 rounded">
+          Book Now
+        </button>
+      ),
+    },
+    {
+      id: 3,
+      picture: trip2,
+      title: "Trip to Beach Paradise",
+      startDate: "2024-06-15",
+      endDate: "2024-06-20",
+      noOfPeople: 4,
+      amount: 1200,
+      bookButton: (
+        <button className="bg-blue text-white px-4 py-2 rounded">
+          Book Now
+        </button>
+      ),
+    },
+    {
+      id: 4,
+      picture: trip3,
+      title: "Mountain Hiking Expedition",
+      startDate: "2024-07-10",
+      endDate: "2024-07-15",
+      noOfPeople: 6,
+      amount: 1800,
+      bookButton: (
+        <button className="bg-blue text-white px-4 py-2 rounded">
+          Book Now
+        </button>
+      ),
+    },
+    // Add more trip data objects
+  ];
   return (
-    <div className="text-center mt-10 mb-10">
-      <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-tertiary mb-10">
-        Become a Beta Tester
-      </h1>
-      <p>
-        Be among the first to explore with us by
-        becoming a beta tester and join one of
-        these trips
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
-        <div>
-          <img
-            src={singleTrip}
-            alt=""
-            className="w-full h-auto"
-          />
-        </div>
-        <div>
-          <img
-            src={singleTrip1}
-            alt=""
-            className="w-full h-auto"
-          />
-        </div>
-        <div>
-          <img
-            src={singleTrip2}
-            alt=""
-            className="w-full h-auto"
-          />
-        </div>
-        <div>
-          <img
-            src={singleTrip3}
-            alt=""
-            className="w-full h-auto"
-          />
-        </div>
+    <>
+      <div className="text-center mt-10 mb-10">
+        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-tertiary mb-10">
+          Become a Beta Tester
+        </h1>
+        <p>
+          Be among the first to explore with us by
+          becoming a beta tester and join one of
+          these trips
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6"></div>
       </div>
-      <Button
-        label="Become a beta user"
-        className="ml-4"
-        variant="primary"
-      />
-    </div>
+
+      <div className="container mx-auto py-8">
+        <h1 className="text-3xl font-bold mb-6">
+          Explore Our Trips
+        </h1>
+        <TripList trips={tripsData} />
+        <Button
+          label="Become a beta user"
+          className="ml-4"
+          variant="primary"
+        />
+      </div>
+    </>
   );
 };
 

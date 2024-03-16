@@ -15,6 +15,8 @@
 - [Figma Design](https://www.figma.com/file/xStlPvBP0jp1BScE4hGser/Untitled?type=design&node-id=1-3&mode=design&t=S7RsLYOaqB24bG8p-0)
 - [Figjam Flow](https://www.figma.com/file/ZzQyh9ciKxSGcy45DUPKp9/Flow-Charts?type=whiteboard&node-id=0-1&t=7q6AyDIOvEnPlZzE-0)
 - [High Fidelity Prottotype](https://app.flutterflow.io/project/monji-lsn3z7)
+- [Tailwind Official Docs](https://v2.tailwindcss.com/docs/)
+- [React Official Docs](https://react.dev/)
 ## How to contribute to this repository
 
 1. Run `git clone https://github.com/djaro-mest-capston-2/djaro-trips-web` to clone the repository 
