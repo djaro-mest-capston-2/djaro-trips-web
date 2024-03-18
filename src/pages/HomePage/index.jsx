@@ -22,8 +22,7 @@ export default function HomePage() {
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-hero inset-0">
-      <div className="absolute inset-x-0 -top-40 sm:-top-80 -z-10 transform-gpu overflow-hidden blur-3xl"></div>
+    <div className="relative">
       <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-secondary">
@@ -34,7 +33,8 @@ const HeroSection = () => {
           </p>
           <input
             className="peer w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
-            placeholder="Search destination "
+            placeholder="Search destination"
+            type="text"
           />
         </div>
       </div>

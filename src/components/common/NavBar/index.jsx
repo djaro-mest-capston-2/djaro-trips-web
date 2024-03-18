@@ -32,7 +32,6 @@ export default function NavBar() {
             borderRadius="2rem"
           />
         </nav>
-        <div className="fixed inset-0 z-50" />
       </header>
     </div>
   );
