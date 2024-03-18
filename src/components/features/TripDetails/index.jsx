@@ -35,7 +35,7 @@ const TripDetails = ({
   bookButton,
 }) => {
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md">
+    <div className="bg-white rounded-lg shadow-md">
       <img
         src={picture}
         alt={title}
