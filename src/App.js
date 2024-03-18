@@ -21,7 +21,6 @@ function App() {
           path="prelaunch"
           element={<PrelaunchHomePage />}
         />
-        {/* <Footer /> */}
       </>
     )
   );

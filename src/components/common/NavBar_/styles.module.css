@@ -1,0 +1,39 @@
+/* src/components/common/NavBar/style.module.css */
+.logo {
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.navLink {
+  transition: color 0.3s ease-in-out;
+}
+
+.navLink:hover {
+  color: var(
+    --tw-color-secondary
+  ); /* Assuming you've set this CSS variable to match Tailwind's secondary color */
+}
+
+.searchInput {
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.searchInput:focus {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.mobileMenuButton {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobileMenuButton {
+    display: block;
+  }
+}
