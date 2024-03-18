@@ -7,6 +7,8 @@ const Button = ({
   type,
   variant,
   className,
+  avatar,
+  borderRadius,
   ...rest
 }) => {
   const getVariantClasses = () => {
@@ -15,14 +17,15 @@ const Button = ({
         return "bg-primary text-white";
       case "secondary":
         return "bg-secondary text-black";
-      // Add more variants as needed
+      case "white":
+        return "bg-white text-black";
       default:
         return "bg-gray-500 text-white";
     }
   };
 
   const getBaseClasses = () =>
-    "px-4 py-2 rounded-md transition duration-300";
+    `px-4 py-2 rounded-md transition duration-300 ${avatar ? "flex items-center space-x-2" : ""}`;
 
   const buttonClasses = `${getBaseClasses()} ${getVariantClasses()} ${className}`;
 
@@ -31,8 +34,16 @@ const Button = ({
       type={type}
       className={buttonClasses}
       onClick={onClick}
+      style={{ borderRadius }}
       {...rest}
     >
+      {avatar && (
+        <img
+          src={avatar}
+          alt="Avatar"
+          className="w-6 h-6 rounded-full"
+        />
+      )}
       {label}
     </button>
   );
@@ -51,6 +62,8 @@ Button.propTypes = {
     "secondary",
   ]),
   className: PropTypes.string,
+  avatar: PropTypes.string, // Accepts avatar as props
+  borderRadius: PropTypes.string, // Accepts border-radius as props
 };
 
 Button.defaultProps = {
@@ -58,6 +71,7 @@ Button.defaultProps = {
   type: "button",
   variant: "primary",
   className: "",
+  borderRadius: "0", // Default border-radius is set to 0
 };
 
 export default Button;
