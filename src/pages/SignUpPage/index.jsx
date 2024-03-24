@@ -152,7 +152,7 @@ export default function SignupPage() {
               href="/login"
               className="text-primary"
             >
-              Sign in here
+              Login
             </a>
           </p>
         </div>
