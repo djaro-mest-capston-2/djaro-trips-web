@@ -5,21 +5,30 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import "./App.css";
-// import Footer from "./components/common/Footer";
-// import NavBar from "./components/common/NavBar/index";
 import HomePage from "./pages/HomePage/index";
 import PrelaunchHomePage from "./pages/PrelaunchHomePage/index";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignUpPage";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        {/* <NavBar /> */}
         <Route index element={<HomePage />} />
         <Route
           exact
           path="prelaunch"
           element={<PrelaunchHomePage />}
+        />
+        <Route
+          exact
+          path="login"
+          element={<LoginPage />}
+        />
+        <Route
+          exact
+          path="register"
+          element={<SignupPage />}
         />
       </>
     )

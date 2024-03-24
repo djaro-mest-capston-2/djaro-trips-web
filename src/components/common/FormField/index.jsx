@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const TextInput = ({
+const FormInput = ({
   label,
   id,
   name,
@@ -35,7 +35,7 @@ const TextInput = ({
   );
 };
 
-TextInput.propTypes = {
+FormInput.propTypes = {
   label: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -47,4 +47,4 @@ TextInput.propTypes = {
   disabled: PropTypes.bool,
 };
 
-export default TextInput;
+export default FormInput;
