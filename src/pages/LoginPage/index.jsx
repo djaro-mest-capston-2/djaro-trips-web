@@ -94,7 +94,7 @@ export default function LoginPage() {
               href="/signup"
               className="text-primary"
             >
-              Sign up here
+              Sign up
             </a>
           </p>
         </div>

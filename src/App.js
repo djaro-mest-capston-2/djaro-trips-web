@@ -14,11 +14,16 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route index element={<HomePage />} />
+        <Route index element={<LoginPage />} />
         <Route
           exact
           path="prelaunch"
           element={<PrelaunchHomePage />}
+        />
+        <Route
+          exact
+          path="home"
+          element={<HomePage />}
         />
         <Route
           exact
@@ -27,7 +32,7 @@ function App() {
         />
         <Route
           exact
-          path="register"
+          path="signup"
           element={<SignupPage />}
         />
       </>
