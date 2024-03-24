@@ -1,5 +1,5 @@
 import { useState } from "react";
-import login from "../../assets/images/login.png";
+import login from "../../assets/images/signup.png";
 import logo from "../../assets/images/logo.png";
 import FormInput from "../../components/common/FormField";
 
